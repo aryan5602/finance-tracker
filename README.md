@@ -2,8 +2,15 @@
 
 A personal finance app I built to track income, expenses and spending habits. You can log transactions, organise them by category, and see a breakdown of where your money is going through a dashboard with charts.
 
-**Live demo:** https://finance-tracker-one-peach.vercel.app
-**Test credentials:** aryan@test.com / aryan5602
+---
+
+### Live demo
+
+🔗 **https://finance-tracker-one-peach.vercel.app**
+
+You can log in with these test credentials to explore the app:
+- **Email:** aryan@test.com
+- **Password:** aryan5602
 
 ---
 
