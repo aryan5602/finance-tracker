@@ -8,6 +8,8 @@ A personal finance app I built to track income, expenses and spending habits. Yo
 
 🔗 **https://finance-tracker-one-peach.vercel.app**
 
+The backend is hosted on Render's free tier — if it hasn't been used in a while it may take up to a minute to wake up on the first request. Just give it a moment and it'll be fine after that.
+
 You can log in with these test credentials to explore the app:
 - **Email:** aryan@test.com
 - **Password:** aryan5602
