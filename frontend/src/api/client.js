@@ -1,0 +1,29 @@
+import axios from 'axios';
+
+// In dev, baseURL is relative so Vite proxy forwards /api → localhost:5000
+// In production, VITE_API_URL must point to the deployed backend (e.g. https://your-app.onrender.com)
+const baseURL = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : '/api';
+
+const client = axios.create({ baseURL });
+
+client.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) config.headers.Authorization = `Bearer ${token}`;
+  return config;
+});
+
+client.interceptors.response.use(
+  (r) => r,
+  (err) => {
+    if (err.response?.status === 401) {
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      window.location.href = '/login';
+    }
+    return Promise.reject(err);
+  }
+);
+
+export default client;
